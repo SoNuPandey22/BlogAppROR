@@ -1,0 +1,48 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+:root {
+	--header: #1A355B;
+}
+
+*, h2 {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: var(--header);
+	padding: 20px;
+}
+nav h2 {
+	color: white;
+	text-align: center;
+}
+
+main{
+	min-height: 85vh;
+	text-align: center;
+}
+
+#empty{
+	color: red;
+}
+
+.menu {
+	background-color: #A8D1DF;
+	padding: 10px;
+	margin-top: 0;
+}
+.card {
+	background-color: #F7F07B; 
+	margin: 2px;
+}
+
+footer {
+    background-color: var(--header);
+	text-align: center;
+	color: white;
+	padding: 5px;
+}

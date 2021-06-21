@@ -1,0 +1,23 @@
+<nav>
+	<h2>Bloging is fun</h2>
+</nav>
+<br>
+<h2 style="text-align: center">New Post</h2>
+<br>
+<main>
+   <ul>
+   	 <% @post.errors.full_messages.each do |msg|%>
+   	 <li><%= msg %></li>
+   	 <% end %>
+   </ul>
+   <%= form_for @post, url: create_post_path do |f| %>
+     <%= f.text_field :title %>
+     <br>
+     <%= f.text_area :content %>
+     <br>
+     <%= f.submit %>
+   <% end %>
+ </main>
+ <footer>
+ 	&copy;copyright 2021 
+ </footer>

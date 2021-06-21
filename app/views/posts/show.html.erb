@@ -1,0 +1,13 @@
+<nav>
+	<h2>Bloging is fun</h2>
+</nav>
+<br>
+<main>
+	<h1><%= @post.title %></h1>
+		<p>Views: <%= @post.views %></p>
+		<p><%= auto_link(simple_format(@post.content)) %></p>
+		<%= link_to 'Back to Home', root_path %>
+</main>
+ <footer>
+ 	&copy;copyright 2021 
+ </footer>

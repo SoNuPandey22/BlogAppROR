@@ -1,0 +1,23 @@
+<nav>
+	<h2>Bloging is fun</h2>
+</nav>
+<br>
+<main>
+   <h1>Edit Post</h1>
+	<ul>
+	  <% @post.errors.full_messages.each do |msg| %>
+	    <li><%= msg %></li>
+	  <% end %>
+	</ul>
+	<%= form_for @post, url: update_post_path, method: :patch do |f| %>
+	  <%= f.text_field :title %>
+	  <br/>
+	  <%= f.text_area :content %>
+	  <br/>
+	  <%= f.submit %>
+	<% end %>
+	<%= link_to 'Back to Home', root_path %>
+</main>
+ <footer>
+ 	&copy;copyright 2021 
+ </footer>

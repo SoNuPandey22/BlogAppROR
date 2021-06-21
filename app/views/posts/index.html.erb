@@ -1,0 +1,25 @@
+<nav>
+	<h2>Bloging is fun</h2>
+</nav>
+
+<main>
+  <div class="menu">
+  	<%= link_to 'New Post', new_post_path %>		
+  </div>
+<% if @posts.count > 0%>
+  <% @posts.each do |post| %>
+  <div class='card'>
+    <h2><%= link_to post.title, show_post_path(id: post.id) %></h2>
+    <h4><%= truncate post.content, length: 50 %></h4>
+    <%= link_to 'Edit Post', edit_post_path(id: post.id) %>
+    <%= link_to 'Delete Post', destroy_post_path(id: post.id), method: :delete %>
+    </div>
+  <% end %>
+
+ <% else %>
+  <h2 id='empty'> Nothing to show :) </h2>
+ <% end %>
+ </main>
+ <footer>
+ 	&copy;copyright 2021 
+ </footer>
